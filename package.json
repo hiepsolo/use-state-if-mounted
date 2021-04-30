@@ -1,0 +1,36 @@
+{
+	"name": "@eoet/use-state-if-mounted",
+	"version": "1.0.1",
+	"description": "A hook for updating state only if the component is mounted.",
+	"author": {
+		"name": "Hiep Nguyen",
+		"email": "hoanghiep2004hy@gmail.com",
+		"url": "https://github.com/eoet/"
+	},
+	"keywords": [
+		"react",
+		"hooks",
+		"react-hooks",
+		"useState",
+		"isMounted"
+	],
+	"main": "index.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "rimraf ./dist && babel src --out-dir ./dist",
+		"prepublishOnly": "yarn build",
+		"pub": "yarn version && yarn publish",
+		"watch": "nodemon --watch src --exec \"yarn build\""
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/cli": "^7.8.4",
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.0",
+		"@babel/preset-react": "^7.9.4",
+		"nodemon": "^2.0.2",
+		"rimraf": "^3.0.2"
+	}
+}
